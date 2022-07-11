@@ -1,0 +1,27 @@
+.logo__first-part,
+.footer-logo-first-part {
+  color: #2196f3;
+}
+
+.logo,
+.footer-logo {
+  font-family: "Raleway";
+  @include font(null, 26px, 1.19, null);
+
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+// .logo--color-dark {
+//   color: #000000;
+
+// }
+// .logo--color-light {
+//   color: #ffffff;
+
+// }
