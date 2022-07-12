@@ -1,6 +1,15 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  // padding-top: 94px;
+  // padding-bottom: 94px;
   /* background-color: violet;
   outline: 1px solid rgb(28, 76, 209); */
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include desctop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }

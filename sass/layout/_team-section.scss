@@ -1,27 +1,47 @@
 .team-section {
   background: #f5f4fa;
-  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+
   .container {
-    display: flex;
+    @include tablet {
+      display: flex;
+    }
   }
 }
 
 .tiam-title {
-  margin-bottom: 50px;
+  @include mobile {
+    margin-bottom: 30px;
+    @include font(null, 28px, 1.17, 0.03em);
+  }
 
-  @include font(null, 36px, 1.17, 0.03em);
+  @include desctop {
+    margin-bottom: 50px;
+    @include font(null, 36px, 1.17, 0.03em);
+  }
 
   color: var(--h-text-color);
   text-align: center;
 }
+
 .team-section-list {
-  display: flex;
-  margin-left: -30px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
+
 .team-card {
-  flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
+  margin-bottom: 30px;
   text-align: center;
+
+  @include tablet {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+  }
+  @include desctop {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 .card-name {
   padding-top: 30px;
@@ -49,6 +69,11 @@
   color: #757575;
 }
 .team-soc-list {
+  @media screen and (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   display: flex;
   justify-content: center;
 }
