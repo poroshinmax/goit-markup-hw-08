@@ -10,6 +10,11 @@
 .about__img {
   padding-top: 0;
   background-color: #ffffff;
+
+  display: none;
+  @include desctop {
+    display: block;
+  }
   &.container {
     display: flex;
     padding: 0;
