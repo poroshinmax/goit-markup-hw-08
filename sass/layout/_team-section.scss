@@ -9,10 +9,8 @@
 }
 
 .tiam-title {
-  @include mobile {
-    margin-bottom: 30px;
-    @include font(null, 28px, 1.17, 0.03em);
-  }
+  margin-bottom: 30px;
+  @include font(null, 28px, 1.17, 0.03em);
 
   @include desctop {
     margin-bottom: 50px;
