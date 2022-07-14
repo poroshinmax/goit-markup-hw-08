@@ -8,7 +8,6 @@
   @include desctop {
     margin-bottom: 50px;
   }
-  // margin-bottom: 50px;
   text-align: center;
 
   @include font(null, 36px, 1.17, 0.03em);
@@ -36,9 +35,6 @@
 }
 
 .clients-link {
-  // display: inline-block;
-  // padding: 0;
-  // outline: none;
   display: flex;
   justify-content: center;
   align-items: center;

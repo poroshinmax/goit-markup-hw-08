@@ -4,27 +4,45 @@
   padding-bottom: 60px;
 }
 .footer .container {
-  display: flex;
+  @include desctop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.tablet {
+  @include tablet {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 .address-list {
+  @media screen and(min-width: 50px) and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
   display: flex;
   flex-direction: column;
+
+  @media screen and(min-width: 50px) and (max-width: 767px) {
+    text-align: center;
+  }
 }
 .footer-list {
   font-style: normal;
 }
 .footer-list-item:not(:last-child) {
+  @include mobile {
+    margin-bottom: 8px;
+  }
   margin-bottom: 9px;
-  width: 231px;
+  @include desctop {
+    width: 231px;
+  }
 }
 
 .footer-address-text {
   color: #ffffff;
 
   @include font(400, 14px, 1.71, 0.03em);
-}
-.footer-mail {
-  margin-bottom: 9px;
 }
 
 .footer-mail,
@@ -34,13 +52,29 @@
 
   @include font(400, 14px, 1.71, 0.03em);
 }
+
+//--------------------------------------- footer-soc-link ----------------------------------------------------------------
+
 .footer-soc {
+  @media screen and(min-width: 50px) and (max-width: 1199px) {
+    margin-bottom: 60px;
+    align-items: center;
+  }
   display: flex;
   flex-direction: column;
-  margin-left: 70px;
+
+  @include mobile {
+    text-align: center;
+    align-items: center;
+  }
+  @include desctop {
+    margin-left: 70px;
+  }
 }
 .footer-soc-title {
-  margin-top: 12px;
+  @include desctop {
+    margin-top: 12px;
+  }
   margin-bottom: 20px;
 
   @include font(null, 14px, 1.14, 0.03em);
@@ -65,7 +99,8 @@
   background: rgba(255, 255, 255, 0.1);
   fill: #ffffff;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms
+    cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     background-color: var(--accent-color);
@@ -73,13 +108,27 @@
   }
 }
 
+//----------------------------------- footer-form --------------------------------------
+
 .footer-form {
-  margin-left: 93px;
-  display: flex;
-  flex-direction: column;
+  @media screen and(min-width: 50px) and (max-width: 1199px) {
+    text-align: center;
+    align-items: center;
+  }
+  @include desctop {
+    width: 570px;
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 93px;
+  }
 }
+
 .footer-form-text {
-  margin-top: 12px;
+  @include desctop {
+    margin-top: 12px;
+  }
+
   margin-bottom: 20px;
 
   @include font(700, 14px, 1.14, 0.03em);
@@ -88,36 +137,49 @@
   color: #ffffff;
 }
 .footer-label {
-  width: 570px;
   position: relative;
+
   display: flex;
-  flex-wrap: wrap;
+  @media screen and(min-width: 50px) and (max-width: 1199px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include desctop {
+    flex-wrap: wrap;
+  }
 }
+
 .footer-input {
-  width: 358px;
+  width: 100%;
+
+  @media screen and(min-width: 50px) and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    width: 450px;
+  }
+  @include desctop {
+    width: 358px;
+  }
+
   height: 50px;
   padding: 15px 0 15px 16px;
 
   color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(
+    0px 4px 4px rgba(0, 0, 0, 0.15)
+  );
   border-radius: 4px;
 }
 .icon-footer {
   margin-left: 10px;
 }
 .footer-form-btn {
-  max-width: 200px;
-  height: 50px;
-  padding: 10px 29px;
-  margin-left: 12px;
-
   @include font(700, 16px, 1.88, 0.06em);
-
-  display: flex;
-  align-items: center;
-  text-align: center;
   outline: none;
 
   color: #ffffff;
@@ -125,4 +187,15 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-color: transparent;
   border-radius: 4px;
+
+  @include desctop {
+    width: 200px;
+    margin-left: 12px;
+    height: 50px;
+    // padding: 10px, 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
 }
