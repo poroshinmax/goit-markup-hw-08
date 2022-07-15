@@ -6,35 +6,35 @@ $bgGrad: linear-gradient(
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #2f303a;
+  background: #2f303a;
   text-align: center;
   padding: 118px 0;
   background-image: $bgGrad,
-    url("./images/mob.jpg");
+    url("../images/mob.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   @include retina {
     background-image: $bgGrad,
-      url("./images/mob-2x.jpg");
+      url("../images/mob-2x.jpg");
   }
 
   @include tablet {
     background-image: $bgGrad,
-      url("./images/hero-bg-tab.jpg");
+      url("../images/hero-bg-tab.jpg");
     @include retina {
       background-image: $bgGrad,
-        url("./images/hero-bg-tab-2x.jpg");
+        url("../images/hero-bg-tab-2x.jpg");
     }
   }
   @include desctop {
     max-width: 1600px;
     padding: 200px 0;
     background-image: $bgGrad,
-      url("./images/bg-hero.jpg");
+      url("../images/bg-hero.jpg");
     @include retina {
       background-image: $bgGrad,
-        url("./images/bg-hero-2x.jpg");
+        url("../images/bg-hero-2x.jpg");
     }
   }
 }
