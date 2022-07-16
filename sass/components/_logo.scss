@@ -6,7 +6,11 @@
 .logo,
 .footer-logo {
   font-family: "Raleway";
-  @include font(null, 26px, 1.19, null);
+  @include font(700, 24px, 1.16, null);
+  @include desctop {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 
   text-decoration: none;
   color: #000000;

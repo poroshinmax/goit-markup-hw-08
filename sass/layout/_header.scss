@@ -12,9 +12,14 @@
 .navigation__link {
   color: #212121;
 
-  @include font(500, 14px, 1.14, 0.02em);
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include font(500, 12px, 1.17, 0.02em);
+  @include desctop {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  transition: color 250ms
+    cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     cursor: pointer;
@@ -36,7 +41,8 @@
     border-radius: 2px;
     background-color: var(--accent-color);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms
+      cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -44,7 +50,8 @@
 .accent:focus {
   cursor: pointer;
   color: var(--accent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation__list {
@@ -54,16 +61,28 @@
 
 .navigation__item {
   position: relative;
+  margin-bottom: 10px;
   &:not(:first-child) {
-    margin-left: 50px;
+    margin-bottom: 0;
+    margin-right: 50px;
+    // margin-left: 50px;
   }
 }
 
 .connect {
-  margin-left: auto;
+  display: none;
+  @include tablet {
+    display: block;
+    margin-left: auto;
+  }
+  @include desctop {
+    display: flex;
+    align-items: baseline;
+  }
+  // margin-left: auto;
 
-  display: flex;
-  align-items: baseline;
+  // display: flex;
+  // align-items: baseline;
 }
 
 .connect__tel,
@@ -76,6 +95,44 @@
   margin-left: 50px;
 }
 .connect__icon {
-  margin-right: 10px;
+  // margin-right: 10px;
+  // fill: currentColor;
+  margin-right: 8px;
   fill: currentColor;
+  @include desctop {
+    margin-right: 10px;
+  }
+}
+.connect__tel .connect__icon {
+  width: 10px;
+  height: 14px;
+  @include desctop {
+    height: 16px;
+  }
+}
+.connect__mail .connect__icon {
+  width: 14px;
+  height: 10px;
+  @include desctop {
+    width: 16px;
+    height: 14px;
+  }
+}
+.menu-btn {
+  padding: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  margin-left: auto;
+  transition: fill 250ms
+    cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+  @include tablet {
+    display: none;
+  }
 }
