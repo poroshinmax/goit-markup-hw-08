@@ -302,7 +302,7 @@ img {
 
 .menu-mob {
   position: fixed;
-  background-color: var(--main-backgr-color);
+  background-color: #ffffff;
   z-index: 1;
   top: 0;
   left: 0;
@@ -374,11 +374,11 @@ img {
 }
 
 .contacts-mob {
+  margin-bottom: 64px;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  margin-bottom: 64px;
 }
 
 .contacts-mob__link {
@@ -390,8 +390,10 @@ img {
 }
 
 .contacts-mob__tel {
+  font-weight: nool;
   font-size: 30px;
   line-height: 1.18;
+  letter-spacing: nool;
   color: var(--accent-color);
 }
 @media screen and (min-width: 420px) {
