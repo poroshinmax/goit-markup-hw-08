@@ -55,8 +55,14 @@
 }
 
 .navigation__list {
-  display: flex;
-  margin-left: 93px;
+  display: none;
+  margin-left: 88px;
+  @include tablet {
+    display: flex;
+  }
+  @include tablet {
+    margin-left: 93px;
+  }
 }
 
 .navigation__item {
@@ -64,8 +70,7 @@
   margin-bottom: 10px;
   &:not(:first-child) {
     margin-bottom: 0;
-    margin-right: 50px;
-    // margin-left: 50px;
+    margin-left: 50px;
   }
 }
 
@@ -79,20 +84,32 @@
     display: flex;
     align-items: baseline;
   }
-  // margin-left: auto;
-
-  // display: flex;
-  // align-items: baseline;
 }
 
 .connect__tel,
 .connect__mail {
+  @include tablet {
+    display: block;
+  }
+
   color: #757575;
 
-  @include font(500, 14px, 1.14, 0.02em);
+  @include font(500, 12px, 1.17, 0.02em);
+  @include desctop {
+    @include font(500, 14px, 1.14, 0.02em);
+  }
+}
+.connect .accent:not(:last-child) {
+  @include tablet {
+    position: relative;
+    margin-bottom: 10px;
+  }
 }
 .accent + .accent {
-  margin-left: 50px;
+  @include desctop {
+    margin-bottom: 0;
+    margin-left: 50px;
+  }
 }
 .connect__icon {
   // margin-right: 10px;
