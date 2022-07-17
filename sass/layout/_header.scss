@@ -29,22 +29,19 @@
 
 .current {
   color: var(--accent-color);
-  display: none;
-  @include tablet {
-    &::after {
-      content: "";
-      width: 100%;
-      height: 4px;
-      top: 45px;
-      position: absolute;
-      display: block;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    top: 45px;
+    position: absolute;
+    display: block;
 
-      border-radius: 2px;
-      background-color: var(--accent-color);
+    border-radius: 2px;
+    background-color: var(--accent-color);
 
-      transition: background-color 250ms
-        cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    transition: background-color 250ms
+      cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
