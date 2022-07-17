@@ -3,6 +3,8 @@
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    @include tablet {
+      justify-content: center;
+    }
   }
 }
