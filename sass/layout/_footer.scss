@@ -179,6 +179,12 @@
   margin-left: 10px;
 }
 .footer-form-btn {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  // text-align: center;
+  justify-content: center;
   @include font(700, 16px, 1.88, 0.06em);
   outline: none;
 
@@ -189,12 +195,6 @@
   border-radius: 4px;
 
   @include desctop {
-    width: 200px;
     margin-left: 12px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
   }
 }
