@@ -509,9 +509,13 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 759px) {
   .about__item {
     margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .about__item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -520,12 +524,19 @@ img {
 @media screen and (min-width: 768px) {
   .about__item {
     width: calc((100% - 30px) / 2);
+    align-items: start;
   }
 }
 @media screen and (min-width: 1200px) {
   .about__item {
     width: calc((100% - 90px) / 4);
     align-items: start;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .about__item:last-child {
     margin-bottom: 0;
   }
 }
@@ -654,6 +665,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
+    margin-bottom: -30px;
   }
 }
 
@@ -751,6 +763,9 @@ img {
 }
 @media screen and (min-width: 480px) {
   .clients-title {
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
     margin-bottom: 30px;
   }
 }
@@ -836,7 +851,7 @@ img {
     margin-bottom: 60px;
   }
 }
-@media screen and (min-width: 50px) and (max-width: 767px) {
+@media screen and (min-width: 50px) and (max-width: 1199px) {
   .address-list {
     text-align: center;
   }
@@ -1113,17 +1128,17 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .product-gallery:first-child .gallery-card {
+    padding: 20px 24px 56px 24px;
+  }
+}
+
 .product-thumb {
   position: relative;
   overflow: hidden;
 }
 
-/* .product-gallery:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-.product-gallery:nth-child(3n + 1) {
-  margin-left: 0;
-} */
 .thumb-action-text {
   font-size: 16px;
   line-height: 1.56;
@@ -1162,16 +1177,6 @@ img {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
-@media screen and (min-width: 370px) {
-  .gallery-card {
-    height: 110px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .gallery-card {
-    height: 146px;
-  }
-}
 
 .product-img-title {
   margin-bottom: 4px;
@@ -1183,10 +1188,10 @@ img {
 }
 
 .product-img-name {
-  color: #757575;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .backdrop {

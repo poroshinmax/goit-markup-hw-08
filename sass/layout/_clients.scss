@@ -3,6 +3,7 @@
 }
 .clients-title {
   @include mobile {
+    @include font(null, 28px, 1.17, 0.03em);
     margin-bottom: 30px;
   }
   @include desctop {
