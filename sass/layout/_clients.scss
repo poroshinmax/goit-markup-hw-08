@@ -3,18 +3,17 @@
 }
 .clients-title {
   @include mobile {
-    @include font(null, 28px, 1.17, 0.03em);
+    @include font(700, 28px, 1.17, 0.03em);
     margin-bottom: 30px;
   }
   @include desctop {
+    @include font(null, 36px, 1.17, 0.03em);
     margin-bottom: 50px;
   }
   text-align: center;
-
-  @include font(null, 36px, 1.17, 0.03em);
-
   color: #212121;
 }
+
 .clients-list {
   @include mobile {
     display: flex;

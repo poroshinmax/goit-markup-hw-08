@@ -756,13 +756,11 @@ img {
 
 .clients-title {
   text-align: center;
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
   color: #212121;
 }
 @media screen and (min-width: 480px) {
   .clients-title {
+    font-weight: 700;
     font-size: 28px;
     line-height: 1.17;
     letter-spacing: 0.03em;
@@ -771,6 +769,9 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .clients-title {
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
     margin-bottom: 50px;
   }
 }
